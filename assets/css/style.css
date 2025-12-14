@@ -271,3 +271,49 @@ h1, h2, h3, .aktenkopf {
 
 .chapter-nav div { flex: 1; }
 .chapter-nav div:last-child { text-align: right; }
+
+
+/* =========================
+   BUCH-ZITATE & MARKIERUNGEN
+   ========================= */
+
+/* Ruhige Dokumentenzitate */
+.content blockquote {
+  margin: 2rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(255,255,255,0.035);
+  border-radius: 8px;
+  max-width: 68ch;
+}
+
+.content blockquote p {
+  margin: 0;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* Zitat-Signaturen */
+.content blockquote cite {
+  display: block;
+  margin-top: 0.6rem;
+  font-style: normal;
+  font-size: 0.8rem;
+  opacity: 0.75;
+  text-align: right;
+}
+
+/* Dezente Textmarkierung (für Aktenbegriffe, Jahre, Schlüsselbegriffe) */
+.content mark {
+  background: rgba(255,77,77,0.15);
+  color: var(--text);
+  padding: 0.05em 0.25em;
+  border-radius: 3px;
+}
+
+/* Dokumentarische Hervorhebung ohne Farbe */
+.content strong {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
