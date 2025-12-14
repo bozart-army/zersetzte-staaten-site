@@ -1,1 +1,24 @@
-
+<!doctype html>
+<html lang="{{ page.lang | default: 'de' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  {% include header.html %}
+  <main class="layout">
+    <aside class="sidebar-left">
+      {% include sidebar-left.html %}
+    </aside>
+    <section class="content">
+      {{ content }}
+    </section>
+    <aside class="sidebar-right">
+      {% include sidebar-right.html %}
+    </aside>
+  </main>
+  <script src="/assets/js/lang.js"></script>
+</body>
+</html>
