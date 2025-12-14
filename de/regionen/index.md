@@ -6,46 +6,43 @@ permalink: /de/regionen/
 
 # Regionen
 
-Diese Übersicht gruppiert die Kapitel nach geografischen Räumen.  
-Die Einordnung folgt der Archivlogik des Buches und dient der Orientierung.
+Diese Übersicht gruppiert die Kapitel des Archivs nach geografischen
+Schwerpunkten.
 
-## Europa
-- Griechenland 1945–1949
-- Italien 1948
-- Albanien 1947–1949
-- Griechenland 1967–1974
-- Polen 1982–1989
-- Jugoslawien 1991–1999
+Die Zuordnung erfolgt automatisch anhand der in den einzelnen Akten
+hinterlegten Metadaten (`regionen:`).
 
-## Asien
-- Iran 1953
-- Syrien 1949 / 1957
-- Laos 1955–1975
-- Tibet 1956–1959
-- Kambodscha 1958–1959
-- Afghanistan ab 1979
+---
 
-## Amerika
-- Guatemala 1954
-- Kuba 1961
-- Brasilien 1964
-- Chile 1970–1973
-- Nicaragua 1979
-- El Salvador 1980er
-- Grenada 1983
-- Panama 1989
-- Haiti 1991–1992 / 2004
-- Venezuela 2002
+{% assign chapters = site.pages
+  | where_exp: "p", "p.path contains 'de/kapitel/'"
+  | sort: "path" %}
 
-## Afrika
-- Kongo 1961
-- Ghana 1966
-- Angola 1975–1976
-- Ruanda 1994
-- Sahelzone 2010er
+{% assign all_regions = "" | split: "" %}
+{% for p in chapters %}
+  {% if p.regionen %}
+    {% for r in p.regionen %}
+      {% unless all_regions contains r %}
+        {% assign all_regions = all_regions | push: r %}
+      {% endunless %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
 
-## Nahost
-- Ägypten 1952–1956
-- Irak 1963 / 2003
-- Libyen 2011
-- Syrien 2011–heute
+{% assign all_regions = all_regions | sort %}
+
+{% for region in all_regions %}
+## {{ region }}
+
+<ul>
+{% for p in chapters %}
+  {% if p.regionen contains region %}
+    <li>
+      <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+---
+{% endfor %}
