@@ -10,40 +10,54 @@ methoden: [Putsch-Logistik, Propaganda, Geheimdienstnetzwerke]
 <div class="aktenkopf">Iran · 1953</div>
 
 ## Narrative Eröffnung
-Im Sommer neunzehnhundertdreiundfünfzig wurde in Teheran eine politische
-Entscheidung erzwungen, die weit über den Iran hinauswirkte.
-Ein demokratisch legitimierter Premierminister verlor die Macht,
+Im Sommer neunzehnhundertdreiundfünfzig erreichte eine politische Krise im Iran
+ihren Wendepunkt. Ein demokratisch legitimierter Premierminister verlor die Macht
 nicht durch Wahlen, sondern durch eine koordinierte verdeckte Operation.
+Der Umsturz veränderte nicht nur die iranische Politik,
+sondern wurde zu einem Referenzfall späterer Interventionen.
 
 ## Geopolitische Interessen
-Im Zentrum stand die Kontrolle über strategische Ressourcen und
-die politische Ausrichtung eines Schlüsselstaates im Nahen Osten.
-Die Verstaatlichung der Ölindustrie wurde als Bedrohung bestehender
-Macht- und Wirtschaftsinteressen bewertet.
+Im Zentrum standen Kontrolle und Zugang zu strategischen Ressourcen.
+Die Verstaatlichung der Ölindustrie stellte bestehende wirtschaftliche
+und politische Machtverhältnisse infrage.
+Der Iran wurde als Schlüsselstaat betrachtet,
+dessen politische Ausrichtung regionale Signalwirkung besaß.
 
 ## Lokale Dynamik
-Der Iran war politisch polarisiert.
+Die iranische Gesellschaft war politisch polarisiert.
 Nationalistische Reformkräfte standen monarchistischen Netzwerken,
 wirtschaftlichen Eliten und Teilen des Militärs gegenüber.
-Diese Spannungen wurden gezielt verstärkt und instrumentalisiert.
+Diese Spannungen wurden nicht nur beobachtet,
+sondern gezielt verstärkt und kanalisiert.
 
 ## Mittel der Einflussnahme
-Zum Einsatz kamen orchestrierte Proteste, Medienkampagnen,
-Bestechung politischer Akteure sowie die Aktivierung
-geheimdienstlicher Netzwerke.
+Eingesetzt wurden orchestrierte Proteste,
+gezielte Medienkampagnen und die Bestechung politischer Akteure.
+Geheimdienstliche Netzwerke koordinierten Kontakte,
+mobilisierten oppositionelle Gruppen
+und beeinflussten Entscheidungsprozesse im Militär.
 Der Machtwechsel wurde als spontane Volksreaktion inszeniert.
 
+## Eskalationslogik
+Als politische Blockaden zunahmen,
+wurde die verdeckte Intervention schrittweise intensiviert.
+Was als Einflussnahme begann,
+mündete in einem direkten Regimewechsel.
+Die Grenze zwischen politischer Steuerung
+und offenem Eingriff wurde überschritten.
+
 ## Folgen für die Bevölkerung
-Die Wiedereinsetzung der Monarchie führte zu jahrzehntelanger
-autoritären Herrschaft.
-Politische Repression, Überwachung und der Ausschluss demokratischer
-Beteiligung prägten den Alltag breiter Bevölkerungsschichten.
+Die Wiedereinsetzung der Monarchie führte zu
+jahrzehntelanger autoritärer Herrschaft.
+Politische Repression, Überwachung
+und der Ausschluss demokratischer Beteiligung
+prägten den Alltag breiter Bevölkerungsschichten.
 
 ## Reflexion
-Iran neunzehnhundertdreiundfünfzig steht exemplarisch für das Muster
-verdeckter Regimewechsel.
+Iran 1953 steht exemplarisch für das Muster verdeckter Regimewechsel.
 Kurzfristige strategische Gewinne erzeugten langfristige Instabilität
 und tiefes Misstrauen gegenüber externen Eingriffen.
+Der Fall wurde zur Blaupause späterer Operationen.
 
 ## Quellen
 - Nationale Archive des Iran
