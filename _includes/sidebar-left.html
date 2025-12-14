@@ -13,35 +13,78 @@
 <div class="menu">
   <h3>Inhaltsfilter</h3>
 
+  <!-- =========================
+       KAPITEL (chronologisch)
+       ========================= -->
   <details>
     <summary>Kapitel (chronologisch)</summary>
     <ul>
-      {% assign chapters = site.pages | where_exp: "p", "p.path contains 'de/kapitel/'" | sort: "path" %}
+      {% assign chapters = site.pages
+        | where_exp: "p", "p.path contains 'de/kapitel/'"
+        | sort: "path" %}
       {% for p in chapters %}
         {% if p.title %}
-          <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+          <li>
+            <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+          </li>
         {% endif %}
       {% endfor %}
     </ul>
   </details>
 
+  <!-- =========================
+       REGIONEN (dynamisch)
+       ========================= -->
   <details>
     <summary>Regionen</summary>
     <ul>
-      <li><a href="{{ '/de/regionen/europa/' | relative_url }}">Europa</a></li>
-      <li><a href="{{ '/de/regionen/asien/' | relative_url }}">Asien</a></li>
+      {% assign all_regions = "" | split: "" %}
+      {% for p in chapters %}
+        {% if p.regionen %}
+          {% for r in p.regionen %}
+            {% unless all_regions contains r %}
+              {% assign all_regions = all_regions | push: r %}
+            {% endunless %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign all_regions = all_regions | sort %}
+      {% for r in all_regions %}
+        <li>
+          <a href="{{ '/de/regionen/' | append: r | slugify | append: '/' | relative_url }}">
+            {{ r }}
+          </a>
+        </li>
+      {% endfor %}
     </ul>
   </details>
 
+  <!-- =========================
+       METHODEN (dynamisch)
+       ========================= -->
   <details>
     <summary>Methoden</summary>
     <ul>
-      <li><a href="{{ '/de/methoden/propaganda/' | relative_url }}">Propaganda</a></li>
-      <li><a href="{{ '/de/methoden/putsch/' | relative_url }}">Putsch-Logistik</a></li>
-      <li><a href="{{ '/de/methoden/finanzierung/' | relative_url }}">Finanzierung & Parteienaufbau</a></li>
-      <li><a href="{{ '/de/methoden/sanktionen/' | relative_url }}">Sanktionen & wirtschaftlicher Druck</a></li>
-      <li><a href="{{ '/de/methoden/paramilitaerisch/' | relative_url }}">Paramilitärische Operationen</a></li>
-      <li><a href="{{ '/de/methoden/geheimdienstnetzwerke/' | relative_url }}">Geheimdienstnetzwerke</a></li>
+      {% assign all_methods = "" | split: "" %}
+      {% for p in chapters %}
+        {% if p.methoden %}
+          {% for m in p.methoden %}
+            {% unless all_methods contains m %}
+              {% assign all_methods = all_methods | push: m %}
+            {% endunless %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign all_methods = all_methods | sort %}
+      {% for m in all_methods %}
+        <li>
+          <a href="{{ '/de/methoden/' | append: m | slugify | append: '/' | relative_url }}">
+            {{ m }}
+          </a>
+        </li>
+      {% endfor %}
     </ul>
   </details>
 </div>
