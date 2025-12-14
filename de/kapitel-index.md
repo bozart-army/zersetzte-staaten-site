@@ -33,7 +33,7 @@ Jede Akte ist eigenständig lesbar, folgt aber einer gemeinsamen dokumentarische
 
 - Die Kapitel erscheinen automatisch in dieser Liste, sobald eine neue Datei unter  
   `de/kapitel/` angelegt wird.
-- Die Sortierung erfolgt nach Dateiname (`1.md`, `2.md`, `3.md` …).
+- Die Sortierung erfolgt nach Dateiname (z. B. `Kapitel-01-...`, `Kapitel-02-...`).
 - Jedes Kapitel folgt der festen Struktur:
   Narrative Eröffnung → Geopolitik → Lokale Dynamik → Mittel → Folgen → Reflexion → Quellen.
 
