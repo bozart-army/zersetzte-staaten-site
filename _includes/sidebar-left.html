@@ -1,26 +1,40 @@
 <div class="menu">
+  <h3>Archiv</h3>
+  <ul>
+    <li>
+      <a href="{{ '/de/kapitel-index/' | relative_url }}">Kapitel-Index</a>
+    </li>
+  </ul>
+</div>
+
+<div class="menu">
   <h3>Inhaltsfilter</h3>
+
   <details>
     <summary>Kapitel (chronologisch)</summary>
     <ul>
-      <li><a href="/{{ page.lang }}/kapitel/1/">1. Griechenland 1945–1949</a></li>
-      <!-- Füge mehr hinzu -->
+      {% assign chapters = site.pages | where_exp: "p", "p.path contains 'de/kapitel/'" | sort: "path" %}
+      {% for p in chapters %}
+        {% if p.title %}
+          <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+        {% endif %}
+      {% endfor %}
     </ul>
   </details>
+
   <details>
     <summary>Regionen</summary>
     <ul>
-      <li><a href="/{{ page.lang }}/regionen/europa/">Europa</a></li>
-      <li><a href="/{{ page.lang }}/regionen/asien/">Asien</a></li>
-      <!-- Gruppiere aus Inhaltsverzeichnis -->
+      <li><a href="{{ '/de/regionen/europa/' | relative_url }}">Europa</a></li>
+      <li><a href="{{ '/de/regionen/asien/' | relative_url }}">Asien</a></li>
     </ul>
   </details>
+
   <details>
     <summary>Methoden</summary>
     <ul>
-      <li><a href="/{{ page.lang }}/methoden/propaganda/">Propaganda</a></li>
-      <li><a href="/{{ page.lang }}/methoden/putsch/">Putsch-Logistik</a></li>
-      <!-- Aus Kapitel 42 -->
+      <li><a href="{{ '/de/methoden/propaganda/' | relative_url }}">Propaganda</a></li>
+      <li><a href="{{ '/de/methoden/putsch/' | relative_url }}">Putsch-Logistik</a></li>
     </ul>
   </details>
 </div>
