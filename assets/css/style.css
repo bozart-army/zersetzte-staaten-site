@@ -211,3 +211,33 @@ h1, h2, h3, .aktenkopf {
 .lang-switcher button {
   min-width: 44px;
 }
+
+
+/* ===== Chapter navigation (Prev/Next) ===== */
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.chapter-nav a {
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.chapter-nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.chapter-nav div {
+  flex: 1;
+}
+
+.chapter-nav div:last-child {
+  text-align: right;
+}
