@@ -180,99 +180,6 @@ h1, h2, h3, .aktenkopf {
   text-shadow: 2px 2px 4px rgba(0,0,0,0.55);
 }
 
-/* Zitate (buchnah, ruhig) */
-.content blockquote {
-  margin: 1.8rem 0;
-  padding: 0.9rem 1.1rem;
-  border-left: 3px solid var(--accent);
-  background: rgba(255,255,255,0.03);
-  border-radius: 8px;
-  max-width: 68ch;
-}
-
-.content blockquote p {
-  margin: 0;
-  line-height: 1.7;
-}
-
-/* Redacted */
-.redacted {
-  background: #000;
-  color: #000;
-  padding: 0 0.2em;
-  border-radius: 2px;
-}
-
-/* Menü (Sidebar) */
-.menu h3 {
-  margin-top: 0;
-  opacity: 0.9;
-}
-
-.menu a {
-  color: var(--text);
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.15rem 0;
-}
-
-.menu a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Sidebar UX polish ===== */
-.menu details {
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 0.6rem 0.7rem;
-  margin: 0.6rem 0;
-  background: rgba(255,255,255,0.02);
-}
-
-.menu summary {
-  cursor: pointer;
-  list-style: none;
-  user-select: none;
-  font-weight: 700;
-  opacity: 0.95;
-}
-
-.menu summary::-webkit-details-marker { display: none; }
-
-.menu ul {
-  margin: 0.6rem 0 0;
-  padding-left: 1.1rem;
-}
-
-.menu li { margin: 0.35rem 0; }
-
-/* ===== Chapter navigation (Prev/Next) ===== */
-.chapter-nav {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-top: 4rem;
-  padding-top: 1.5rem;
-  border-top: 1px dashed var(--line);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.85rem;
-}
-
-.chapter-nav a {
-  color: var(--text);
-  text-decoration: none;
-  opacity: 0.85;
-}
-
-.chapter-nav a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-.chapter-nav div { flex: 1; }
-.chapter-nav div:last-child { text-align: right; }
-
-
 /* =========================
    BUCH-ZITATE & MARKIERUNGEN
    ========================= */
@@ -303,7 +210,7 @@ h1, h2, h3, .aktenkopf {
   text-align: right;
 }
 
-/* Dezente Textmarkierung (für Aktenbegriffe, Jahre, Schlüsselbegriffe) */
+/* Dezente Textmarkierung */
 .content mark {
   background: rgba(255,77,77,0.15);
   color: var(--text);
@@ -311,9 +218,147 @@ h1, h2, h3, .aktenkopf {
   border-radius: 3px;
 }
 
-/* Dokumentarische Hervorhebung ohne Farbe */
+/* Dokumentarische Hervorhebung */
 .content strong {
   font-weight: 600;
   letter-spacing: 0.02em;
 }
 
+/* Redacted */
+.redacted {
+  background: #000;
+  color: #000;
+  padding: 0 0.2em;
+  border-radius: 2px;
+}
+
+/* =========================
+   STARTSEITE – RHYTHMUS & WEISSRAUM
+   ========================= */
+
+/* Mehr Ruhe im Einstieg */
+.content > h1:first-child {
+  margin-top: 0.2rem;
+  margin-bottom: 2.8rem;
+}
+
+/* Absätze auf der Startseite etwas luftiger */
+.content > p {
+  margin-bottom: 1.6rem;
+}
+
+/* Trennlinien (---) eleganter */
+.content hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--line), transparent);
+  margin: 3rem 0;
+}
+
+/* Hero-Zitat auf Startseite */
+.quote-hero {
+  margin: 3.5rem auto;
+  padding: 1.4rem 1.6rem;
+  max-width: 72ch;
+  background: rgba(255,255,255,0.035);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+}
+
+.quote-hero p {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  font-style: normal; /* Startseiten-Hero nicht kursiv */
+}
+
+.quote-hero cite {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  text-align: right;
+  letter-spacing: 0.06em;
+}
+
+/* Listen lesbarer */
+.content ul {
+  max-width: 68ch;
+  padding-left: 1.2rem;
+}
+
+.content li {
+  margin: 0.45rem 0;
+}
+
+/* =========================
+   SIDEBAR UX
+   ========================= */
+
+.menu h3 {
+  margin-top: 0;
+  opacity: 0.9;
+}
+
+.menu a {
+  color: var(--text);
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.15rem 0;
+}
+
+.menu a:hover { text-decoration: underline; }
+
+.menu details {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+  margin: 0.6rem 0;
+  background: rgba(255,255,255,0.02);
+}
+
+.menu summary {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.menu summary::-webkit-details-marker { display: none; }
+
+.menu ul {
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.menu li { margin: 0.35rem 0; }
+
+/* =========================
+   CHAPTER NAV (Prev/Next)
+   ========================= */
+
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--line);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+}
+
+.chapter-nav a {
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.chapter-nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.chapter-nav div { flex: 1; }
+.chapter-nav div:last-child { text-align: right; }
