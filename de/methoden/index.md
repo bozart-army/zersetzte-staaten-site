@@ -7,27 +7,32 @@ permalink: /de/methoden/
 # Methoden
 
 Diese Übersicht gruppiert Kapitel nach wiederkehrenden Eingriffsmustern.
-Sie ist ein Navigationswerkzeug – keine zusätzliche Interpretation.
+Sie dient ausschließlich der Navigation und Mustererkennung –  
+nicht der zusätzlichen Interpretation.
 
-## Propaganda
+---
+
+## [Propaganda](/de/methoden/propaganda/)
 - Psychologische Operationen
 - Medienkampagnen
 - Gerüchte, Narrative, Desinformation
 
-## Putsch-Logistik
+## [Putsch-Logistik](/de/methoden/putsch/)
 - Kontakte zu Militär- und Elitenetzwerken
 - Finanzierung, Ausrüstung, Koordination
 - Unterstützung nach der Machtübernahme
 
-## Finanzierung & Parteienaufbau
+## [Finanzierung & Parteienaufbau](/de/methoden/finanzierung/)
 - Wahlhilfe, verdeckte Geldflüsse
-- Aufbau/Lenkung politischer Kräfte
+- Aufbau und Lenkung politischer Kräfte
 
-## Sanktionen & wirtschaftlicher Druck
+## [Sanktionen & wirtschaftlicher Druck](/de/methoden/sanktionen/)
 - Blockaden, Kreditpolitik, Handelsdruck
 
-## Paramilitärische Operationen
+## [Paramilitärische Operationen](/de/methoden/paramilitaerisch/)
 - Ausbildung, Bewaffnung, Stellvertreterkräfte
 
-## Geheimdienstnetzwerke
-- Informanten, Frontorganisationen, verdeckte Infrastruktur
+## [Geheimdienstnetzwerke](/de/methoden/geheimdienstnetzwerke/)
+- Informanten
+- Frontorganisationen
+- Verdeckte Infrastruktur
