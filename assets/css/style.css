@@ -15,3 +15,180 @@ h1, h2, h3 { font-family: monospace; text-transform: uppercase; }
 .lang-switcher button { background: var(--panel); color: var(--text); border: 1px solid var(--line); padding: 0.5rem; cursor: pointer; }
 @media (max-width: 1100px) { .layout { grid-template-columns: 1fr; } }
 /* Akten-Stil: .aktenkopf { border: 2px dashed var(--accent); padding: 0.5rem; font-family: monospace; } */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+:root {
+  --bg: #0a0e1a; /* Dunkelnavy für Retro-Doku */
+  --panel: #121726;
+  --text: #e0e0e0;
+  --accent: #ff4d4d; /* Rot für Stempel */
+  --line: rgba(255,255,255,0.1);
+  --grain-intensity: 0.05; /* Anpassen für stärkeren Grain */
+  --scanline-opacity: 0.1;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
+  position: relative; /* Für Overlays */
+}
+
+/* Typewriter Font für Headlines und Akten */
+h1, h2, h3, .aktenkopf {
+  font-family: 'Special Elite', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Grain Texture via SVG Filter */
+svg#grain-filter {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  pointer-events: none;
+  filter: url(#grain); /* SVG Grain Filter */
+  opacity: var(--grain-intensity);
+  z-index: -1;
+}
+
+/* Scanlines Effect */
+.content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 1px,
+    rgba(0,0,0, var(--scanline-opacity)) 1px,
+    rgba(0,0,0, var(--scanline-opacity)) 2px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Papier-Texture (subtiler Blend) */
+.content {
+  background-blend-mode: multiply; /* Mit leichter Texture mischen, falls Background-Image hinzugefügt */
+  /* Optional: background-image: url('paper-texture.png'); für echte Texture */
+}
+
+/* Redacted/Stempel-Effekt für Aktenkopf */
+.aktenkopf {
+  position: relative;
+  padding: 1rem;
+  border: 2px dashed var(--accent);
+  color: var(--accent);
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.aktenkopf::before {
+  content: 'DECLASSIFIED';
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  transform: rotate(-15deg);
+  font-size: 1.2em;
+  color: var(--accent);
+  opacity: 0.7;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Redacted Text (für zensierte Parts, z.B. <span class="redacted">Text</span>) */
+.redacted {
+  background: black;
+  color: black;
+  position: relative;
+}
+
+.redacted:hover {
+  background: transparent;
+  color: var(--text); /* Optional: Hover zum Enthüllen */
+}
+
+/* Subtile Flicker-Animation für CRT-Feel */
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.95; }
+  100% { opacity: 1; }
+}
+
+.content {
+  animation: flicker 0.1s infinite alternate;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fade-In für Text */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section.content > * {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Bestehende Styles (erweitert) */
+.header {
+  background: linear-gradient(to bottom, var(--panel), transparent);
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid var(--line);
+  z-index: 10;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.sidebar-left, .sidebar-right, .content {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.lang-switcher button {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+/* SVG für Grain Filter (am Ende der CSS hinzufügen) */
+<svg id="grain-filter" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <filter id="grain">
+    <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" />
+    <feBlend mode="multiply" in="SourceGraphic" in2="grain" result="grainBlend" />
+  </filter>
+</svg>
