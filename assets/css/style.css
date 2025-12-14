@@ -484,3 +484,51 @@ h1, h2, h3, .aktenkopf {
 }
 
 
+/* =========================
+   KAPITEL-ANFANG – AKTENFÜHRUNG
+   ========================= */
+
+/* Aktenkopf als „Headerblock“: mehr Präsenz, mehr Buch */
+.aktenkopf {
+  margin: 0 0 2.9rem;
+  padding: 1.05rem 1.25rem;
+  border-radius: 10px;
+  letter-spacing: 0.14em;
+}
+
+/* Wenn direkt nach Aktenkopf eine H2 kommt: Abstand harmonisieren */
+.aktenkopf + h2 {
+  margin-top: 0;
+}
+
+/* Kapitel-Intro (erste Zeilen wirken wie Lead) */
+.content p:first-of-type {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  opacity: 0.96;
+}
+
+/* Dezente „Dokumentenlinie“ nach Aktenkopf */
+.aktenkopf::after {
+  content: "";
+  display: block;
+  margin: 1rem auto 0;
+  height: 1px;
+  width: 70%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+  opacity: 0.9;
+}
+
+/* Optional: wenn du irgendwo eine Zeile als Meta nutzen willst:
+   <p class="akte-meta">Athen · März 1946 · Akte 01</p>
+   (kein Muss – nur Styling vorbereitet)
+*/
+.akte-meta {
+  margin: -1.3rem 0 2.2rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
