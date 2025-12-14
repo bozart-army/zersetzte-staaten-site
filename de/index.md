@@ -6,9 +6,9 @@ permalink: /de/
 
 # Zersetzte Staaten – Die Akten der Macht
 
-Dieses Projekt ist ein dokumentarisches Archiv verdeckter Einflussnahme
-seit neunzehnhundertfünfundvierzig.
-Es basiert auf freigegebenen Dokumenten, wissenschaftlichen Analysen
+Dieses Projekt ist ein dokumentarisches Archiv verdeckter Einflussnahme  
+seit neunzehnhundertfünfundvierzig.  
+Es basiert auf freigegebenen Dokumenten, wissenschaftlichen Analysen  
 und journalistischen Quellen.
 
 Keine Spekulationen.  
@@ -17,8 +17,10 @@ Aktenlogik.
 
 ---
 
-> **„Der größte Feind der Wahrheit ist nicht die Lüge – sondern das Vergessen.“**  
-> — *Saša Bagarić*
+<blockquote class="quote-hero">
+  <p>Der größte Feind der Wahrheit ist nicht die Lüge – sondern das Vergessen.</p>
+  <cite>Saša Bagarić</cite>
+</blockquote>
 
 ---
 
@@ -31,8 +33,8 @@ Aktenlogik.
 
 ## Wie dieses Archiv funktioniert
 
-Jedes Kapitel ist eine eigenständige Akte mit fester Struktur:
-Narrative Eröffnung, geopolitische Einordnung, lokale Dynamik,
+Jedes Kapitel ist eine eigenständige Akte mit fester Struktur:  
+Narrative Eröffnung, geopolitische Einordnung, lokale Dynamik,  
 Mittel der Einflussnahme, Folgen, Reflexion, Quellen.
 
 Das Archiv kann chronologisch gelesen werden  
