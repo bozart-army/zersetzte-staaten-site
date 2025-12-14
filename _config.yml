@@ -1,0 +1,12 @@
+title: Zersetzte Staaten – Die Akten der Macht
+description: Ein dokumentarisches Archiv verdeckter Einflussnahme (1945–heute)
+markdown: kramdown
+theme: null  # Kein Theme, custom CSS
+plugins:
+  - jekyll-relative-links  # Für interne Links
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
