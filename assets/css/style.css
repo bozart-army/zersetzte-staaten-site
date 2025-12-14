@@ -7,8 +7,8 @@
   --accent: #ff4d4d;
   --line: rgba(255,255,255,0.1);
 
-  --scanline-opacity: 0.08;  /* 0.03–0.12 */
-  --noise-opacity: 0.06;     /* 0.02–0.10 */
+  --scanline-opacity: 0.08;
+  --noise-opacity: 0.06;
 }
 
 * { box-sizing: border-box; }
@@ -20,23 +20,29 @@ body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* Headline/Archiv-Look */
+/* =========================
+   ARCHIV-TYPOGRAFIE
+   ========================= */
+
 h1, h2, h3, .aktenkopf {
   font-family: 'Special Elite', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
-/* Header */
+/* =========================
+   HEADER
+   ========================= */
+
 .header {
-  background: linear-gradient(to bottom, var(--panel), rgba(18,23,38,0.0));
+  background: linear-gradient(to bottom, var(--panel), rgba(18,23,38,0));
   position: sticky;
   top: 0;
   z-index: 10;
   display: flex;
-  gap: 1rem;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
   padding: 1rem;
   border-bottom: 1px solid var(--line);
 }
@@ -51,7 +57,7 @@ h1, h2, h3, .aktenkopf {
   color: var(--text);
   text-decoration: none;
   margin-right: 0.9rem;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 .header nav a:hover { opacity: 1; }
@@ -61,16 +67,15 @@ h1, h2, h3, .aktenkopf {
   color: var(--text);
   border: 1px solid var(--line);
   padding: 0.45rem 0.6rem;
-  cursor: pointer;
   border-radius: 6px;
+  cursor: pointer;
   min-width: 44px;
 }
 
-.lang-switcher button:hover {
-  border-color: rgba(255,255,255,0.25);
-}
+/* =========================
+   LAYOUT
+   ========================= */
 
-/* Layout */
 .layout {
   display: grid;
   grid-template-columns: 25% 50% 25%;
@@ -80,24 +85,24 @@ h1, h2, h3, .aktenkopf {
   gap: 1rem;
 }
 
-.sidebar-left, .sidebar-right, .content {
+.sidebar-left,
+.sidebar-right,
+.content {
   background: var(--panel);
   border: 1px solid var(--line);
   padding: 1rem;
   border-radius: 10px;
 }
 
-@media (max-width: 1100px) {
-  .layout { grid-template-columns: 1fr; }
-}
+/* =========================
+   CONTENT-EFFEKTE
+   ========================= */
 
-/* Content Overlay Effekte (nur CSS, stabil) */
 .content {
   position: relative;
   overflow: hidden;
 }
 
-/* Scanlines */
 .content::after {
   content: "";
   position: absolute;
@@ -105,15 +110,12 @@ h1, h2, h3, .aktenkopf {
   pointer-events: none;
   background: repeating-linear-gradient(
     to bottom,
-    rgba(0,0,0,0) 0px,
-    rgba(0,0,0,0) 2px,
+    transparent 0px,
+    transparent 2px,
     rgba(0,0,0,var(--scanline-opacity)) 3px
   );
-  mix-blend-mode: multiply;
-  opacity: 1;
 }
 
-/* Noise (Pseudo-Grain) */
 .content::before {
   content: "";
   position: absolute;
@@ -123,50 +125,59 @@ h1, h2, h3, .aktenkopf {
     radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05) 0 1px, transparent 2px),
     radial-gradient(circle at 70% 60%, rgba(255,255,255,0.04) 0 1px, transparent 2px),
     radial-gradient(circle at 40% 80%, rgba(255,255,255,0.03) 0 1px, transparent 2px);
-  background-size: 120px 120px, 140px 140px, 160px 160px;
   opacity: var(--noise-opacity);
-  filter: contrast(140%);
 }
 
-/* ===== Buch-Lesefluss / Typografie ===== */
+/* =========================
+   BUCH-LESERHYGIENE
+   ========================= */
+
 .content p {
-  line-height: 1.75;
   max-width: 68ch;
+  line-height: 1.8;
   margin: 0 0 1.25rem;
+  hyphens: auto;
+}
+
+.content p + p { margin-top: 1.35rem; }
+
+.content p:first-of-type {
+  font-size: 1.02rem;
+  opacity: 0.96;
 }
 
 .content h1 {
-  margin: 0 0 2rem;
+  margin-bottom: 2.8rem;
   font-size: 2.05rem;
   letter-spacing: 0.08em;
 }
 
 .content h2 {
-  margin: 3rem 0 0.9rem;
-  font-size: 1.15rem;
-  letter-spacing: 0.04em;
+  margin-top: 3.6rem;
   border-bottom: 1px solid var(--line);
   padding-bottom: 0.35rem;
 }
 
-.content h3 {
-  margin: 2rem 0 0.6rem;
-  font-size: 0.95rem;
-  opacity: 0.95;
+.content hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--line), transparent);
+  margin: 3rem 0;
 }
 
-/* Aktenkopf + Stempel */
+/* =========================
+   AKTENKOPF
+   ========================= */
+
 .aktenkopf {
-  position: relative;
-  padding: 0.95rem 1.1rem;
+  margin: 0 0 3rem;
+  padding: 1.1rem 1.25rem;
   border: 1.5px solid var(--accent);
+  background: rgba(0,0,0,0.15);
   color: var(--accent);
   text-align: center;
-  margin: 0 0 2.5rem;
-  border-radius: 8px;
-  background: rgba(0,0,0,0.15);
-  letter-spacing: 0.12em;
-  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  border-radius: 10px;
 }
 
 .aktenkopf::before {
@@ -175,136 +186,43 @@ h1, h2, h3, .aktenkopf {
   top: -12px;
   right: -18px;
   transform: rotate(-15deg);
-  font-size: 1.05rem;
   opacity: 0.75;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.55);
 }
 
 /* =========================
-   BUCH-ZITATE & MARKIERUNGEN
+   ZITATE
    ========================= */
 
-/* Ruhige Dokumentenzitate */
 .content blockquote {
-  margin: 2rem 0;
-  padding: 1rem 1.25rem;
+  margin: 2.5rem 0;
+  padding: 1.1rem 1.3rem;
   border-left: 3px solid var(--accent);
   background: rgba(255,255,255,0.035);
   border-radius: 8px;
-  max-width: 68ch;
 }
 
 .content blockquote p {
   margin: 0;
-  line-height: 1.7;
   font-style: italic;
 }
 
-/* Zitat-Signaturen */
 .content blockquote cite {
   display: block;
   margin-top: 0.6rem;
-  font-style: normal;
   font-size: 0.8rem;
   opacity: 0.75;
   text-align: right;
 }
 
-/* Dezente Textmarkierung */
-.content mark {
-  background: rgba(255,77,77,0.15);
-  color: var(--text);
-  padding: 0.05em 0.25em;
-  border-radius: 3px;
-}
-
-/* Dokumentarische Hervorhebung */
-.content strong {
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-/* Redacted */
-.redacted {
-  background: #000;
-  color: #000;
-  padding: 0 0.2em;
-  border-radius: 2px;
-}
-
 /* =========================
-   STARTSEITE – RHYTHMUS & WEISSRAUM
+   SIDEBARS
    ========================= */
 
-/* Mehr Ruhe im Einstieg */
-.content > h1:first-child {
-  margin-top: 0.2rem;
-  margin-bottom: 2.8rem;
-}
-
-/* Absätze auf der Startseite etwas luftiger */
-.content > p {
-  margin-bottom: 1.6rem;
-}
-
-/* Trennlinien (---) eleganter */
-.content hr {
-  border: none;
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--line), transparent);
-  margin: 3rem 0;
-}
-
-/* Hero-Zitat auf Startseite */
-.quote-hero {
-  margin: 3.5rem auto;
-  padding: 1.4rem 1.6rem;
-  max-width: 72ch;
-  background: rgba(255,255,255,0.035);
-  border-left: 4px solid var(--accent);
-  border-radius: 10px;
-}
-
-.quote-hero p {
-  margin: 0;
-  font-size: 1.15rem;
-  line-height: 1.65;
-  font-style: normal; /* Startseiten-Hero nicht kursiv */
-}
-
-.quote-hero cite {
-  display: block;
-  margin-top: 0.8rem;
-  font-size: 0.85rem;
-  opacity: 0.75;
-  text-align: right;
-  letter-spacing: 0.06em;
-}
-
-/* Listen lesbarer */
-.content ul {
-  max-width: 68ch;
-  padding-left: 1.2rem;
-}
-
-.content li {
-  margin: 0.45rem 0;
-}
-
-/* =========================
-   SIDEBAR UX
-   ========================= */
-
-.menu h3 {
-  margin-top: 0;
-  opacity: 0.9;
-}
+.menu h3 { margin-top: 0; }
 
 .menu a {
   color: var(--text);
   text-decoration: none;
-  display: inline-block;
-  padding: 0.15rem 0;
 }
 
 .menu a:hover { text-decoration: underline; }
@@ -312,223 +230,61 @@ h1, h2, h3, .aktenkopf {
 .menu details {
   border: 1px solid var(--line);
   border-radius: 10px;
-  padding: 0.6rem 0.7rem;
+  padding: 0.6rem;
   margin: 0.6rem 0;
-  background: rgba(255,255,255,0.02);
 }
-
-.menu summary {
-  cursor: pointer;
-  list-style: none;
-  user-select: none;
-  font-weight: 700;
-  opacity: 0.95;
-}
-
-.menu summary::-webkit-details-marker { display: none; }
-
-.menu ul {
-  margin: 0.6rem 0 0;
-  padding-left: 1.1rem;
-}
-
-.menu li { margin: 0.35rem 0; }
 
 /* =========================
-   CHAPTER NAV (Prev/Next)
+   CHAPTER NAV
    ========================= */
 
 .chapter-nav {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
   margin-top: 4rem;
   padding-top: 1.5rem;
   border-top: 1px dashed var(--line);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 0.85rem;
 }
 
-.chapter-nav a {
-  color: var(--text);
-  text-decoration: none;
-  opacity: 0.85;
-}
-
-.chapter-nav a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-.chapter-nav div { flex: 1; }
-.chapter-nav div:last-child { text-align: right; }
-
 /* =========================
-   KAPITEL – LESERHYGIENE
+   MOBILE – FINAL
    ========================= */
 
-/* Mehr vertikale Atmung zwischen Absätzen */
-.content p + p {
-  margin-top: 1.35rem;
-}
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
 
-/* Sanfte Abschnittstrennung ohne harte Linien */
-.content h2 + p::before {
-  content: "";
-  display: block;
-  height: 0.6rem;
-}
+  .header nav {
+    display: none;
+  }
 
-/* Dezente Erstzeilen-Betonung (buchnah) */
-.content p:first-of-type {
-  letter-spacing: 0.01em;
-}
+  .sidebar-left,
+  .sidebar-right {
+    opacity: 0.95;
+  }
 
-/* Listen in Kapiteln ruhiger */
-.content ul {
-  margin-top: 0.8rem;
-  margin-bottom: 1.4rem;
-}
-
-/* Quellenblöcke optisch absetzen */
-.content h2 + ul,
-.content h3 + ul {
-  margin-top: 0.8rem;
-}
-
-/* Längere Kapitel minimal schmaler für Fokus */
-@media (min-width: 1200px) {
   .content {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 1.25rem;
   }
 }
 
 /* =========================
-   QUELLEN & FUSSNOTEN
+   DRUCK / PDF
    ========================= */
 
-/* Quellen-Überschrift klar, ruhig */
-.content h2[id*="quelle"],
-.content h2:has(+ ul) {
-  margin-top: 4rem;
+@media print {
+  body { background: #fff; color: #000; }
+
+  .header,
+  .sidebar-left,
+  .sidebar-right { display: none; }
+
+  .content { background: transparent; border: none; }
+
+  .aktenkopf {
+    color: #000;
+    border-color: #000;
+  }
 }
-
-/* Quellenliste wie Literaturverzeichnis */
-.content ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.content ul li {
-  position: relative;
-  padding-left: 1.4rem;
-  margin-bottom: 0.6rem;
-  line-height: 1.55;
-  font-size: 0.9rem;
-  opacity: 0.9;
-}
-
-/* Nummern-/Marker-Optik links */
-.content ul li::before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0.6;
-}
-
-/* Links in Quellen dezenter */
-.content ul li a {
-  color: var(--text);
-  text-decoration: none;
-  border-bottom: 1px dotted rgba(255,255,255,0.25);
-}
-
-.content ul li a:hover {
-  border-bottom-color: var(--accent);
-}
-
-/* Inline-Fußnoten (falls verwendet) */
-.content sup {
-  font-size: 0.7em;
-  vertical-align: super;
-  margin-left: 0.1em;
-}
-
-/* Fußnotenbereich optisch absetzen */
-.content .footnotes {
-  margin-top: 3.5rem;
-  padding-top: 1.2rem;
-  border-top: 1px dashed var(--line);
-  font-size: 0.85rem;
-  opacity: 0.9;
-}
-
-.content .footnotes ol {
-  padding-left: 1.2rem;
-}
-
-.content .footnotes li {
-  margin-bottom: 0.6rem;
-}
-
-/* Rücksprung-Link (↩︎) unaufdringlich */
-.content .footnotes a {
-  text-decoration: none;
-  opacity: 0.7;
-}
-
-.content .footnotes a:hover {
-  opacity: 1;
-}
-
-
-/* =========================
-   KAPITEL-ANFANG – AKTENFÜHRUNG
-   ========================= */
-
-/* Aktenkopf als „Headerblock“: mehr Präsenz, mehr Buch */
-.aktenkopf {
-  margin: 0 0 2.9rem;
-  padding: 1.05rem 1.25rem;
-  border-radius: 10px;
-  letter-spacing: 0.14em;
-}
-
-/* Wenn direkt nach Aktenkopf eine H2 kommt: Abstand harmonisieren */
-.aktenkopf + h2 {
-  margin-top: 0;
-}
-
-/* Kapitel-Intro (erste Zeilen wirken wie Lead) */
-.content p:first-of-type {
-  font-size: 1.02rem;
-  line-height: 1.8;
-  opacity: 0.96;
-}
-
-/* Dezente „Dokumentenlinie“ nach Aktenkopf */
-.aktenkopf::after {
-  content: "";
-  display: block;
-  margin: 1rem auto 0;
-  height: 1px;
-  width: 70%;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
-  opacity: 0.9;
-}
-
-/* Optional: wenn du irgendwo eine Zeile als Meta nutzen willst:
-   <p class="akte-meta">Athen · März 1946 · Akte 01</p>
-   (kein Muss – nur Styling vorbereitet)
-*/
-.akte-meta {
-  margin: -1.3rem 0 2.2rem;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.82rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  opacity: 0.7;
-}
-
