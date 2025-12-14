@@ -10,39 +10,47 @@ methoden: [Finanzierung & Parteienaufbau, Geheimdienstnetzwerke, Propaganda]
 <div class="aktenkopf">Japan · 1950er–1960er</div>
 
 ## Narrative Eröffnung
-Nach der Niederlage im Zweiten Weltkrieg begann in Japan eine Phase
-politischer Neuordnung. Hinter dem sichtbaren Wiederaufbau formierte sich
-ein langfristiges Machtarrangement, das Stabilität versprach und zugleich
-politische Alternativen systematisch begrenzte.
+Nach der Niederlage im Zweiten Weltkrieg stand Japan vor einem radikalen
+Neubeginn. Unter formaler demokratischer Neuordnung entstand ein politisches
+System, das Stabilität versprach und zugleich klare Grenzen politischer
+Alternativen zog. Die Weichenstellungen dieser Jahre prägten die japanische
+Politik für Jahrzehnte.
 
 ## Geopolitische Interessen
-Japan wurde zum zentralen Pfeiler westlicher Ordnungspolitik in Ostasien.
-Die Sicherung eines verlässlichen Bündnispartners hatte Vorrang vor
-pluralistischer politischer Entwicklung. Antikommunistische Ausrichtung
-galt als strategische Notwendigkeit.
+Japan entwickelte sich rasch zu einem zentralen Pfeiler westlicher
+Ordnungspolitik in Ostasien. Seine geostrategische Lage machte das Land zu
+einem Schlüsselpartner in der regionalen Eindämmungspolitik.
+Die Sicherung einer verlässlichen politischen Ausrichtung hatte Vorrang
+vor pluralistischer Konkurrenz.
 
 ## Lokale Dynamik
-Die japanische Parteienlandschaft konsolidierte sich rasch.
+Die Parteienlandschaft konsolidierte sich in kurzer Zeit.
 Konservative Kräfte vereinigten sich in der Liberaldemokratischen Partei,
-während oppositionelle Bewegungen organisatorisch und finanziell
-strukturell benachteiligt blieben.
+während oppositionelle Bewegungen organisatorisch geschwächt blieben.
+Gesellschaftliche Stabilität wurde mit politischer Kontinuität gleichgesetzt.
 
 ## Mittel der Einflussnahme
-Über Jahre flossen finanzielle Mittel in parteipolitische Strukturen,
-begleitet von geheimdienstlicher Koordination und diskreter Unterstützung
-konservativer Netzwerke. Mediennarrative stabilisierten das Bild einer
-alternativlosen politischen Ordnung.
+Über Jahre flossen finanzielle Mittel in parteipolitische Strukturen.
+Geheimdienstliche Kontakte unterstützten den Aufbau stabiler Netzwerke,
+während Mediennarrative eine alternativlose politische Ordnung vermittelten.
+Ein direkter Eingriff blieb unnötig – die Steuerung erfolgte strukturell.
+
+## Eskalationslogik
+Die langfristige Absicherung politischer Dominanz ersetzte kurzfristige
+Intervention. Einflussnahme wurde normalisiert und institutionalisiert.
+Politische Vielfalt wich administrativer Stabilität.
 
 ## Folgen für die Bevölkerung
-Japan erlebte wirtschaftliche Stabilität und Wachstum,
-zugleich jedoch eine langfristige politische Einseitigkeit.
-Demokratische Konkurrenz existierte formal,
-war faktisch jedoch stark eingeschränkt.
+Japan erlebte wirtschaftliches Wachstum und soziale Stabilisierung.
+Gleichzeitig verfestigte sich eine politische Einseitigkeit,
+die demokratische Konkurrenz faktisch einschränkte.
+Opposition blieb möglich, aber wirkungslos.
 
 ## Reflexion
-Japan zeigt ein Muster stiller, dauerhafter Einflussnahme.
-Ohne offene Gewalt entstand ein politisches System,
-dessen Richtung über Jahrzehnte vorgegeben blieb.
+Japan zeigt das Modell dauerhafter, leiser Einflussnahme.
+Ohne offene Gewalt entstand ein System,
+dessen Richtung über Jahrzehnte vorgegeben blieb
+und dessen Legitimität sich aus Stabilität speiste.
 
 ## Quellen
 - Nationale Archive Japans
