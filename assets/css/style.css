@@ -362,3 +362,45 @@ h1, h2, h3, .aktenkopf {
 
 .chapter-nav div { flex: 1; }
 .chapter-nav div:last-child { text-align: right; }
+
+/* =========================
+   KAPITEL – LESERHYGIENE
+   ========================= */
+
+/* Mehr vertikale Atmung zwischen Absätzen */
+.content p + p {
+  margin-top: 1.35rem;
+}
+
+/* Sanfte Abschnittstrennung ohne harte Linien */
+.content h2 + p::before {
+  content: "";
+  display: block;
+  height: 0.6rem;
+}
+
+/* Dezente Erstzeilen-Betonung (buchnah) */
+.content p:first-of-type {
+  letter-spacing: 0.01em;
+}
+
+/* Listen in Kapiteln ruhiger */
+.content ul {
+  margin-top: 0.8rem;
+  margin-bottom: 1.4rem;
+}
+
+/* Quellenblöcke optisch absetzen */
+.content h2 + ul,
+.content h3 + ul {
+  margin-top: 0.8rem;
+}
+
+/* Längere Kapitel minimal schmaler für Fokus */
+@media (min-width: 1200px) {
+  .content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
