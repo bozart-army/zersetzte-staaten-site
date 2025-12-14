@@ -1,8 +1,19 @@
 # Zersetzte Staaten – Die Akten der Macht
 
-**Ein dokumentarisches Archiv verdeckter Einflussnahme seit 1945.**  
-Basierend auf freigegebenen Dokumenten, wissenschaftlichen Analysen  
-und journalistischen Quellen.
+Ein dokumentarisches Archivprojekt zur Rekonstruktion verdeckter
+politischer, militärischer und wirtschaftlicher Einflussnahme
+seit 1945.
+
+---
+
+## Überblick
+
+**Zersetzte Staaten – Die Akten der Macht** ist ein langfristig angelegtes
+Archivprojekt, das historisch belegte Interventionen und Machtmechanismen
+systematisch dokumentiert.
+
+Das Projekt versteht sich nicht als Meinungsmedium,
+sondern als **strukturierte Rekonstruktion historischer Prozesse**.
 
 Keine Spekulationen.  
 Keine Verschwörungstheorien.  
@@ -10,124 +21,111 @@ Aktenlogik.
 
 ---
 
-## Überblick
+## Ziel des Projekts
 
-**Zersetzte Staaten – Die Akten der Macht** ist ein langfristig angelegtes
-dokumentarisches Projekt, das verdeckte politische, militärische und
-ökonomische Eingriffe systematisch rekonstruiert.
+Das Ziel dieses Archivs ist es, historische Vorgänge **nachvollziehbar**
+zu machen – nicht sie zu bewerten oder politisch zu instrumentalisieren.
 
-Jedes Kapitel ist eine **eigenständige Akte**.  
-Gemeinsam bilden sie ein **Archiv**, das Muster sichtbar macht:
-Methoden, Dynamiken, Eskalationslogiken und ihre Folgen.
-
-Das Projekt ist bewusst **chronologisch aufgebaut** und verzichtet auf
-vereinfachende Narrative oder ideologische Rahmungen.
+Im Mittelpunkt stehen:
+- belegte Abläufe
+- institutionelle Mechanismen
+- langfristige Auswirkungen auf Gesellschaften und Staaten
 
 ---
 
-## Grundprinzipien
+## Methodik
 
-- **Quellenbasierte Rekonstruktion**  
-  Ausschließlich belegbare Informationen aus Archiven, Forschung
-  und journalistischer Arbeit.
+Alle Inhalte basieren ausschließlich auf:
+- freigegebenen Regierungsdokumenten
+- wissenschaftlichen Publikationen
+- anerkanntem investigativem Journalismus
 
-- **Keine Spekulation**  
-  Was nicht belegt ist, wird nicht behauptet.
+Jedes Kapitel folgt einer **festen Struktur**:
 
-- **Keine Verschwörungstheorien**  
-  Macht wird als System analysiert, nicht als Mythos.
+1. Narrative Eröffnung  
+2. Geopolitische Einordnung  
+3. Lokale Dynamik  
+4. Mittel der Einflussnahme  
+5. Folgen für die Bevölkerung  
+6. Reflexion  
+7. Quellen
 
-- **Archiv statt Meinung**  
-  Einordnung erfolgt strukturell, nicht polemisch.
-
----
-
-## Struktur des Archivs
-
-Jedes Kapitel folgt einer festen dokumentarischen Struktur:
-
-1. **Narrative Eröffnung**  
-   Konkreter historischer Einstieg.
-
-2. **Geopolitische Einordnung**  
-   Interessen, Machtlagen, strategische Kontexte.
-
-3. **Lokale Dynamik**  
-   Akteure vor Ort, Konfliktlinien, gesellschaftliche Brüche.
-
-4. **Mittel der Einflussnahme**  
-   Propaganda, Finanzierung, Geheimdienste, paramilitärische Strukturen,
-   wirtschaftlicher Druck.
-
-5. **Folgen für die Bevölkerung**  
-   Politische, soziale und menschliche Konsequenzen.
-
-6. **Reflexion**  
-   Muster, Langzeitwirkungen, historische Bedeutung.
-
-7. **Quellen**  
-   Transparente, überprüfbare Nachweise.
+Diese Struktur ist verbindlich und dient der Vergleichbarkeit.
 
 ---
 
-## Website
+## Aufbau des Archivs
 
-Die öffentliche Website ist die **digitale Archivoberfläche** des Projekts:
+- **Chronologisch** gegliederte Kapitel
+- Ergänzende Filter nach **Regionen** und **Methoden**
+- Jedes Kapitel ist als **eigenständige Akte** lesbar
+- Keine nachträgliche Umschreibung bestehender Texte
 
-👉 https://bozart-army.github.io/zersetzte-staaten-site/de/
-
-Funktionen:
-- Chronologischer Kapitel-Index
-- Filter nach **Regionen** und **Methoden**
-- Quellenübersicht
-- Buchnahe Typografie und Lesefluss
-- Druck- und zitierfähige Darstellung
-
-Die Website ist **keine Blogplattform**, sondern eine **Archivstruktur**.
+Das Archiv wird schrittweise erweitert.
 
 ---
 
-## Technischer Rahmen
+## Abgrenzung
 
-- **Static Site** (GitHub Pages)
-- **Jekyll**
-- Markdown-basierte Kapitel
-- Metadaten-gestützte Filterlogik
-- Keine Tracker, keine Cookies, kein Analytics-Noise
+Dieses Projekt ist ausdrücklich:
 
-Ziel ist **Langzeitstabilität**, nicht kurzfristiger Traffic.
+- keine Verschwörungstheorie
+- kein Aktivismus
+- kein politisches Kampagnenprojekt
+- kein Echtzeitjournalismus
 
----
-
-## Status
-
-Das Archiv wird **kapitelweise erweitert**.  
-Änderungen erfolgen nachvollziehbar und transparent.
-
-Bereits veröffentlichte Akten werden **nicht in ihrer Aussage verändert**.  
-Ergänzungen dienen ausschließlich der Kontextualisierung oder Präzisierung.
+Es behandelt historisch dokumentierte Vorgänge
+und vermeidet spekulative Deutungen.
 
 ---
 
 ## Autor
 
-**Saša Bagarić**
+**Saša Bagarić**  
+Konzeption, Recherche, Text, Struktur
 
-Recherche, Konzeption, Struktur und Text.
+---
+
+## Nutzung & Zitation
+
+Inhalte dürfen zitiert und referenziert werden,
+sofern der Kontext gewahrt bleibt.
+
+Details zur korrekten Zitierweise finden sich in:
+- `CITATION_GUIDE.md`
+
+---
+
+## Mitarbeit & Beiträge
+
+Externe Beiträge sind bewusst **begrenzt**,
+um die strukturelle und methodische Konsistenz zu wahren.
+
+Details:
+- `CONTRIBUTING.md`
+- `RESEARCH_POLICY.md`
+
+---
+
+## Dokumentation
+
+Weitere zentrale Dokumente:
+
+- `PROJECT_MANIFEST.md` – Haltung & Zweck  
+- `ABOUT.md` – Über das Projekt  
+- `FAQ.md` – Häufige Fragen  
+- `PRESS.md` – Presseinformationen  
+- `TIMELINE_OVERVIEW.md` – Meta-Zeitachse  
 
 ---
 
 ## Lizenz
 
-Dieses Projekt steht unter der **MIT License**.
+Dieses Projekt verwendet die **MIT License**  
+für Code und technische Struktur.
 
-Das bedeutet:
-- Nutzung, Kopieren, Modifikation und Weiterverbreitung sind erlaubt
-- auch für kommerzielle Zwecke
-- unter Beibehaltung des Copyright-Hinweises
-  und der Lizenzbedingungen
-
-Siehe `LICENSE` für den vollständigen Text der MIT License.
+Texte unterliegen zusätzlich
+den im Projekt definierten Zitier- und Nutzungshinweisen.
 
 ---
 
