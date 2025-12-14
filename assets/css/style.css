@@ -63,6 +63,7 @@ h1, h2, h3, .aktenkopf {
   padding: 0.45rem 0.6rem;
   cursor: pointer;
   border-radius: 6px;
+  min-width: 44px;
 }
 
 .lang-switcher button:hover {
@@ -127,15 +128,45 @@ h1, h2, h3, .aktenkopf {
   filter: contrast(140%);
 }
 
+/* ===== Buch-Lesefluss / Typografie ===== */
+.content p {
+  line-height: 1.75;
+  max-width: 68ch;
+  margin: 0 0 1.25rem;
+}
+
+.content h1 {
+  margin: 0 0 2rem;
+  font-size: 2.05rem;
+  letter-spacing: 0.08em;
+}
+
+.content h2 {
+  margin: 3rem 0 0.9rem;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.35rem;
+}
+
+.content h3 {
+  margin: 2rem 0 0.6rem;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
 /* Aktenkopf + Stempel */
 .aktenkopf {
   position: relative;
-  padding: 0.9rem 1rem;
-  border: 2px dashed var(--accent);
+  padding: 0.95rem 1.1rem;
+  border: 1.5px solid var(--accent);
   color: var(--accent);
   text-align: center;
-  margin: 0 0 1rem;
+  margin: 0 0 2.5rem;
   border-radius: 8px;
+  background: rgba(0,0,0,0.15);
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
 }
 
 .aktenkopf::before {
@@ -147,6 +178,21 @@ h1, h2, h3, .aktenkopf {
   font-size: 1.05rem;
   opacity: 0.75;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.55);
+}
+
+/* Zitate (buchnah, ruhig) */
+.content blockquote {
+  margin: 1.8rem 0;
+  padding: 0.9rem 1.1rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+  max-width: 68ch;
+}
+
+.content blockquote p {
+  margin: 0;
+  line-height: 1.7;
 }
 
 /* Redacted */
@@ -166,6 +212,8 @@ h1, h2, h3, .aktenkopf {
 .menu a {
   color: var(--text);
   text-decoration: none;
+  display: inline-block;
+  padding: 0.15rem 0;
 }
 
 .menu a:hover {
@@ -198,35 +246,22 @@ h1, h2, h3, .aktenkopf {
 
 .menu li { margin: 0.35rem 0; }
 
-.menu a {
-  display: inline-block;
-  padding: 0.15rem 0;
-}
-
-.menu a:hover {
-  text-decoration: underline;
-}
-
-/* Buttons in Header minimal cleaner */
-.lang-switcher button {
-  min-width: 44px;
-}
-
-
 /* ===== Chapter navigation (Prev/Next) ===== */
 .chapter-nav {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: 1.25rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--line);
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--line);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
 }
 
 .chapter-nav a {
   color: var(--text);
   text-decoration: none;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 .chapter-nav a:hover {
@@ -234,10 +269,5 @@ h1, h2, h3, .aktenkopf {
   text-decoration: underline;
 }
 
-.chapter-nav div {
-  flex: 1;
-}
-
-.chapter-nav div:last-child {
-  text-align: right;
-}
+.chapter-nav div { flex: 1; }
+.chapter-nav div:last-child { text-align: right; }
