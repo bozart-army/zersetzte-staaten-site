@@ -404,3 +404,83 @@ h1, h2, h3, .aktenkopf {
   }
 }
 
+/* =========================
+   QUELLEN & FUSSNOTEN
+   ========================= */
+
+/* Quellen-Überschrift klar, ruhig */
+.content h2[id*="quelle"],
+.content h2:has(+ ul) {
+  margin-top: 4rem;
+}
+
+/* Quellenliste wie Literaturverzeichnis */
+.content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.content ul li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.55;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Nummern-/Marker-Optik links */
+.content ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.6;
+}
+
+/* Links in Quellen dezenter */
+.content ul li a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(255,255,255,0.25);
+}
+
+.content ul li a:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* Inline-Fußnoten (falls verwendet) */
+.content sup {
+  font-size: 0.7em;
+  vertical-align: super;
+  margin-left: 0.1em;
+}
+
+/* Fußnotenbereich optisch absetzen */
+.content .footnotes {
+  margin-top: 3.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px dashed var(--line);
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.content .footnotes ol {
+  padding-left: 1.2rem;
+}
+
+.content .footnotes li {
+  margin-bottom: 0.6rem;
+}
+
+/* Rücksprung-Link (↩︎) unaufdringlich */
+.content .footnotes a {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.content .footnotes a:hover {
+  opacity: 1;
+}
+
+
