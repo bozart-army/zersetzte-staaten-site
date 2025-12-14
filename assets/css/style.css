@@ -171,3 +171,43 @@ h1, h2, h3, .aktenkopf {
 .menu a:hover {
   text-decoration: underline;
 }
+
+/* ===== Sidebar UX polish ===== */
+.menu details {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+  margin: 0.6rem 0;
+  background: rgba(255,255,255,0.02);
+}
+
+.menu summary {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.menu summary::-webkit-details-marker { display: none; }
+
+.menu ul {
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.menu li { margin: 0.35rem 0; }
+
+.menu a {
+  display: inline-block;
+  padding: 0.15rem 0;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons in Header minimal cleaner */
+.lang-switcher button {
+  min-width: 44px;
+}
